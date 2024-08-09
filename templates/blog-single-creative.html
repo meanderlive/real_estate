@@ -1,0 +1,191 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+        <!-- start section -->
+        
+        <section class="top-space-margin">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <span class="fs-18 mb-5 d-inline-block">By <a href="#" class="text-dark-gray text-decoration-line-bottom">{{ blog_creative.blogger_name }}</a> in <a href="#" class="text-dark-gray text-decoration-line-bottom">Marketing</a> on {{ blog_creative.uploaded_at }}</span>
+                        <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-0">{{ blog_creative.blog.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+       
+        <!-- start section -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <p class="text-center" >{{ blog_creative.content|safe }}</p>
+                             
+                            <!-- <div class="offset-lg-1 col-md-8 last-paragraph-no-margin text-center text-md-start">
+                                
+                                <p class="text-center" >{{ blog_creative.content|safe }}</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        
+        <!-- start section -->
+        <section class="half-section pt-0"> 
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="row mb-30px">
+                            <div class="tag-cloud col-md-9 text-center text-md-start sm-mb-15px">
+                                <a href="{% url 'agent-details' %}">Development</a> 
+                                <a href="{% url 'agent-details' %}">Event</a>
+                                <a href="{% url 'agent-details' %}">Multimedia </a>
+                                <a href="{% url 'agent-details' %}">Fashion</a>
+                            </div> 
+                            <div class="tag-cloud col-md-3 text-uppercase text-center text-md-end">
+                                <a class="likes-count fw-500 mx-0" href="#"><i class="fa-regular fa-heart text-red me-10px"></i><span class="text-dark-gray text-dark-gray-hover">05 Likes</span></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-6">
+                                <div class="d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px">
+                                    <div class="w-140px text-center me-50px sm-mx-auto">
+                                        <img src="{% static 'images/avtar-07.jpg' %}" class="rounded-circle w-120px" alt="">
+                                        <a href="{% url 'agent-details' %}" class="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Colene Landin</a>
+                                        <span class="fs-15 lh-20 d-block sm-mb-15px">Co-founder</span>
+                                    </div>
+                                    <div class="w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin">
+                                        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type.</p>
+                                        <a href="{% url 'agent-details' %}" class="btn btn-link btn-large text-dark-gray mt-15px">All author posts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center elements-social social-icon-style-04">
+                                <ul class="medium-icon dark">
+                                    <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                    <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>
+                                    <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                    <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li> 
+                                    <li><a class="behance" href="http://www.behance.com/" target="_blank"><i class="fa-brands fa-behance"></i><span></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+       
+        
+        <!-- start section -->
+        <section class="pb-0">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center mb-2"> 
+                        <h5 class="alt-font text-dark-gray fw-500">4 Comments</h5>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <ul class="blog-comment">
+                            <li>
+                                <div class="d-block d-md-flex w-100 align-items-center align-items-md-start ">
+                                    <div class="w-90px sm-w-65px sm-mb-10px">
+                                        <img src="{% static 'images/avtar-18.jpg' %}" class="rounded-circle" alt="">
+                                    </div>
+                                    <div class="w-100 ps-30px last-paragraph-no-margin sm-ps-0">
+                                        <a href="#" class="text-dark-gray fw-500">Herman Miller</a>
+                                        <a href="#comments" class="btn-reply text-uppercase section-link">Reply</a>
+                                        <div class="fs-14 lh-24 mb-10px">17 July 2020, 6:05 PM</div>
+                                        <p class="w-85 sm-w-100">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the make book.</p>
+                                    </div>
+                                </div>
+                                <ul class="child-comment">
+                                    <li>
+                                        <div class="d-block d-md-flex w-100 align-items-center align-items-md-start ">
+                                            <div class="w-90px sm-w-65px sm-mb-10px">
+                                                <img src="{% static 'images/avtar-19.jpg' %}" class="rounded-circle" alt="">
+                                            </div>
+                                            <div class="w-100 ps-30px last-paragraph-no-margin sm-ps-0">
+                                                <a href="#" class="text-dark-gray fw-500">Wilbur Haddock</a>
+                                                <a href="#comments" class="btn-reply text-uppercase section-link">Reply</a>
+                                                <div class="fs-14 lh-24 mb-10px">18 July 2020, 10:19 PM</div>
+                                                <p class="w-85 sm-w-100">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-block d-md-flex w-100 align-items-center align-items-md-start border-radius-5px p-50px md-p-30px sm-p-20px bg-very-light-gray">
+                                            <div class="w-90px sm-w-65px sm-mb-10px">
+                                                <img src="{% static 'images/avtar-17.jpg' %}" class="rounded-circle" alt="">
+                                            </div>
+                                            <div class="w-100 ps-30px last-paragraph-no-margin sm-ps-0">
+                                                <a href="#" class="text-dark-gray fw-500">Colene Landin</a>
+                                                <a href="#comments" class="btn-reply text-uppercase section-link">Reply</a>
+                                                <div class="fs-14 lh-24 mb-10px">18 July 2020, 12:39 PM</div>
+                                                <p class="w-85 sm-w-100">Lorem ipsum is simply dummy text of the printing and typesetting industry. Ipsum has been the industry's standard dummy text.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="d-block d-md-flex w-100 align-items-center align-items-md-start ">
+                                    <div class="w-90px sm-w-65px sm-mb-10px">
+                                        <img src="{% static 'images/avtar-18.jpg' %}" class="rounded-circle" alt="">
+                                    </div>
+                                    <div class="w-100 ps-30px last-paragraph-no-margin sm-ps-0">
+                                        <a href="#" class="text-dark-gray fw-500">Jennifer Freeman</a>
+                                        <a href="#comments" class="btn-reply text-uppercase section-link">Reply</a>
+                                        <div class="fs-14 lh-24 mb-10px">19 July 2020, 8:25 PM</div>
+                                        <p class="w-85 sm-w-100">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the make a type specimen book.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->
+        <section id="comments" class="pb-30px sm-pb-50px overlap-height">
+            <div class="container overlap-gap-section">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 mb-3 sm-mb-6">
+                        <h6 class="alt-font text-dark-gray fw-500 mb-5px">Write a comment</h6>
+                        <div class="mb-5px">Your email address will not be published. Required fields are marked *</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <form action="email-templates/contact-form.php" method="post" class="row contact-form-style-02">
+                            <div class="col-md-6 mb-30px">
+                                <input class="input-name border-radius-4px form-control required" type="text" name="name" placeholder="Enter your name*">
+                            </div> 
+                            <div class="col-md-6 mb-30px">
+                                <input class="border-radius-4px form-control required" type="email" name="email" placeholder="Enter your email address*">
+                            </div> 
+                            <div class="col-md-12 mb-30px">
+                                <textarea class="border-radius-4px form-control" cols="40" rows="4" name="comment" placeholder="Your message"></textarea>
+                            </div> 
+                            <div class="col-12">
+                                <input type="hidden" name="redirect" value="">
+                                <button class="btn btn-dark-gray btn-small btn-round-edge submit" type="submit">Post Comment</button> 
+                            </div>
+                            <div class="col-12 mb-30px">
+                                <div class="form-results mt-20px d-none"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+{% endblock %}

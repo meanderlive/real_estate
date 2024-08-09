@@ -1,0 +1,534 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- start page title -->
+        <section class="cover-background page-title-big-typography ipad-top-space-margin">
+            <div class="container">
+                <div class="row align-items-center align-items-lg-end justify-content-center extra-very-small-screen g-0">
+                    <div class="col-xl-7 col-lg-8 position-relative page-title-extra-small md-mb-30px md-mt-auto" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h3 class="alt-font fw-600 text-dark-gray mb-15px ls-minus-1px">{{ property.name }}</h3>
+                        <h1 class="mb-0 d-flex"><i class="feather icon-feather-map-pin icon-extra-medium text-base-color me-5px"></i>{{ property.address }}</h1>
+                    </div>
+                    <div class="col-lg-3 offset-xl-2 offset-lg-1 border-start border-2 border-color-base-color ps-40px sm-ps-25px md-mb-auto">
+                        <h4 class="text-dark-gray fw-700 alt-font mb-5px">${{ property.price }}</h4>
+                        <!-- <span class="fw-500 fs-18">$3,700 - Per sq. ft.</span> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end page title -->
+        <!-- start section -->
+        <section class="p-0 overflow-hidden">
+            <div class="container-fluid p-0"> 
+                <div class="row row-cols-1 justify-content-center">
+                    <!-- start content carousal item -->
+                    <div class="col">
+                        <div class="swiper magic-cursor slider-four-slide swiper-dark-pagination swiper-pagination-style-3" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 20, "loop": true, "pagination": { "el": ".slider-four-slide-pagination", "clickable": true }, "autoplay": { "delay": 3000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 3 }, "992": { "slidesPerView": 3 }, "768": { "slidesPerView": 2 } }, "effect": "slide" }'>
+                            <div class="swiper-wrapper">
+                                <!-- start content carousal item -->
+                                <div class="swiper-slide">
+                                    <img src="{{ property.image.url }}" alt="" class="w-100" />
+                                </div>
+                                <!-- end content carousal item -->
+                                <!-- start content carousal item -->
+                                <div class="swiper-slide">
+                                    <img src="{{ property.image.url }}" alt="" class="w-100" /> 
+                                </div>
+                                <!-- end content carousal item -->
+                                <!-- start content carousal item -->
+                                <div class="swiper-slide">
+                                    <img src="{{ property.image.url }}" alt="" class="w-100" />
+                                </div>
+                                <!-- end content carousal item -->
+                                <!-- start content carousal item -->
+                                <div class="swiper-slide">
+                                    <img src="{{ property.image.url }}" alt="" class="w-100" />
+                                </div>
+                                <!-- end content carousal item --> 
+                                <!-- start content carousal item -->
+                                <div class="swiper-slide">
+                                    <img src="{{ property.image.url }}" alt="" class="w-100" />
+                                </div>
+                                <!-- end content carousal item -->
+                                <!-- start content carousal item -->
+                                <div class="swiper-slide">
+                                    <img src="{{ property.image.url }}" alt="" class="w-100" /> 
+                                </div>
+                                <!-- end content carousal item -->
+                            </div>
+                            <!-- start slider navigation -->
+                            <!-- <div class="slider-one-slide-prev-1 icon-very-small bg-white h-40px w-40px swiper-button-prev slider-navigation-style-01"><i class="feather icon-feather-arrow-left fs-20 text-light-gray"></i></div>
+                            <div class="slider-one-slide-next-1 icon-very-small bg-white h-40px w-40px swiper-button-next slider-navigation-style-01"><i class="feather icon-feather-arrow-right fs-20 text-light-gray"></i></div> -->
+                            <!-- end slider navigation -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section --> 
+        <!-- start section --> 
+        <section class="pt-30px pb-30px border-bottom border-color-extra-medium-gray">
+            <div class="container"> 
+                <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2">
+                    <div class="col text-center border-end xs-border-end-0 border-color-extra-medium-gray alt-font md-mb-15px">
+                        <span class="fs-19 text-dark-gray fw-600">Property size:</span> 700sq ft
+                    </div>
+                    <div class="col text-center border-end md-border-end-0 border-color-extra-medium-gray alt-font md-mb-15px">
+                        <span class="fs-19 text-dark-gray fw-600">Year built:</span> 2016
+                    </div>
+                    <div class="col text-center border-end xs-border-end-0 border-color-extra-medium-gray alt-font sm-mb-15px">
+                        <span class="fs-19 text-dark-gray fw-600">Accommodation:</span> Furnished
+                    </div>
+                    <div class="col text-center alt-font">
+                        <span class="fs-19 text-dark-gray fw-600">Heating:</span> TA furnace
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->  
+        <section class="position-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 md-mb-50px">
+                        <div class="row mb-15px">
+                            <div class="col-12">
+                                <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Property description</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod.</p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col bg-very-light-gray p-35px lg-ps-15px lg-pe-15px border-radius-6px fs-16">
+                                <div class="row row-cols-2 row-cols-md-4 row-cols-sm-2">
+                                    <div class="col text-center border-end border-color-extra-medium-gray sm-mb-30px">
+                                        <img src="{% static 'images/demo-real-estate-icon-bed.svg' %}" class="w-50px mb-15px" alt="">
+                                        <span class="text-dark-gray d-block lh-20">{{ property.bedroom }} Bedrooms</span>
+                                    </div>
+                                    <div class="col text-center border-end sm-border-end-0 border-color-extra-medium-gray sm-mb-30px">
+                                        <img src="{% static 'images/demo-real-estate-icon-bath.svg' %}" class="w-50px mb-15px" alt="">
+                                        <span class="text-dark-gray d-block lh-20">{{ property.bathroom }} Bathrooms</span>
+                                    </div>
+                                    <div class="col text-center border-end border-color-extra-medium-gray">
+                                        <img src="{% static 'images/demo-real-estate-icon-car.svg' %}" class="w-50px mb-15px" alt="">
+                                        <span class="text-dark-gray d-block lh-20">2 Parking</span>
+                                    </div>
+                                    <div class="col text-center">
+                                        <img src="{% static 'images/demo-real-estate-icon-swimming.svg' %}" class="w-50px mb-15px" alt="">
+                                        <span class="text-dark-gray d-block lh-20">Swimming pool</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-7">
+                            <div class="col-12">
+                                <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Specification</span>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-08.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Property ID:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">GE-G612</div>
+                                </div>
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-09.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Property type:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">Single Family</div>
+                                </div>
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-12.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Property size:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">1400 Sq Ft</div>
+                                </div>
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-15.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Cooling:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">Yes</div>
+                                </div>
+                                <div class="row g-0 align-items-center lg-mb-15px lg-pb-15px lg-border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-13.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Swimming pool:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">No</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-06.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Parking:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">3 Car garage</div>
+                                </div>
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-11.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Heating:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">Yes</div>
+                                </div>
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-10.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Outdoor:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">Porch & Patio</div>
+                                </div>
+                                <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-14.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Year built:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">2013</div>
+                                </div>
+                                <div class="row g-0 align-items-center">
+                                    <div class="col">
+                                        <!-- start features box item -->
+                                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                                            <div class="feature-box-icon me-10px">
+                                                <img src="{% static 'images/demo-real-estate-property-details-09.svg' %}" class="w-25px" alt="">
+                                            </div>
+                                            <div class="feature-box-content">
+                                                <span class="text-dark-gray">Total floors:</span>
+                                            </div>
+                                        </div>
+                                        <!-- end features box item -->
+                                    </div>
+                                    <div class="col">03</div>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                        <div class="row mt-7">
+                            <div class="col-12">
+                                <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Features</span>
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <!-- start list style -->
+                                <ul class="list-style-02 ps-0 mb-0">
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Refrigerator</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Gym</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Washer</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Barbeque</li> 
+                                </ul>
+                                <!-- end list style -->
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <!-- start list style -->
+                                <ul class="list-style-02 ps-0 mb-0">
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Hangers</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Microwave</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Sauna</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Dryer</li> 
+                                </ul>
+                                <!-- end list style -->
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <!-- start list style -->
+                                <ul class="list-style-02 ps-0 mb-0">
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Laundry</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Shower</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Internet</li>
+                                    <li><i class="bi bi-check-circle icon-small me-10px"></i>Outdoor</li> 
+                                </ul>
+                                <!-- end list style -->
+                            </div>
+                        </div>
+                        <div class="row mt-7">
+                            <div class="col-12">
+                                <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Ground floor plan</span>
+                                <img src="{% static 'images/demo-real-estate-property-details-16.jpg' %}" class="border-radius-6px" alt="">
+                            </div>
+                        </div>
+                        <div class="row mt-7">
+                            <div class="col-12">
+                                <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">First floor plan</span>
+                                <img src="{% static 'images/demo-real-estate-property-details-17.jpg' %}" class="border-radius-6px" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- end sticky -->
+                </div>
+            </div>
+        </section>
+        <!-- end section --> 
+        <!-- start section --> 
+        
+        <!-- end section --> 
+        <!-- start section --> 
+        <section class="pt-0 pb-30px position-relative overlap-height overflow-hidden"> 
+            <div class="container-fluid overlap-gap-section">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Best review by <span class="fw-700 text-highlight d-inline-block">happy customer<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 p-0 review-style-09">
+                        <div class="swiper slider-shadow-left-right lg-slider-shadow-none magic-cursor lg-ps-15px lg-pe-15px" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "autoplay": { "delay": 2000, "disableOnInteraction": false },  "pagination": { "el": ".slider-three-slide-pagination", "clickable": true, "dynamicBullets": true }, "navigation": { "nextEl": ".slider-three-slide-next", "prevEl": ".slider-three-slide-prev" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1400": { "slidesPerView": 4 }, "1200": { "slidesPerView": 3 }, "768": { "slidesPerView": 2 } }, "effect": "slide" }'>
+                            <div class="swiper-wrapper pt-30px pb-30px">
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-26.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <span class="fw-600 alt-font text-dark-gray d-inline-block">Matthew taylor</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-28.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Herman miller</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-25.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jacob kalling</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-26.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Alexa harvard</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-24.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jhon smith</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-25.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <span class="fw-600 alt-font text-dark-gray d-inline-block">Matthew taylor</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-28.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Herman miller</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item --> 
+                                <div class="swiper-slide"> 
+                                    <!-- start review item -->
+                                    <div class="border-radius-10px bg-white box-shadow-double-large">
+                                        <div class="d-flex align-items-center p-40px md-p-25px">
+                                            <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{% static 'images/avtar-25.jpg' %}" alt="" />
+                                            <div>
+                                                <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
+                                                <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jacob kalling</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end review item --> 
+                                </div>
+                                <!-- end slider item -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+{% endblock %}
