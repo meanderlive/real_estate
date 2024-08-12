@@ -65,7 +65,7 @@
                                                 <div class="col md-mb-30px">
                                                     <a href="{% url 'rent-properties' %}" class="opacity-10 text-center justify-content-center flex-column d-flex">
                                                         <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="{% static 'images/demo-real-estate-icon-condominium.svg' %}" class="w-50px" alt="">
+                                                            <img src="{Login% static 'images/demo-real-estate-icon-condominium.svg' %}" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">18K</span>
                                                         </span>
                                                         <span class="alt-font fw-600 fs-17 text-dark-gray">Condominium</span>
@@ -80,7 +80,7 @@
                                                         <span class="alt-font fw-600 fs-17 text-dark-gray">Home</span>
                                                     </a>
                                                 </div>
-                                                <div class="col xs-mb-30px">
+                                                <div class="col xs-mb-3Login0px">
                                                     <a href="{% url 'rent-properties' %}" class="opacity-10 text-center justify-content-center flex-column d-flex">
                                                         <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="{% static 'images/demo-real-estate-icon-office.svg' %}" class="w-50px" alt="">
@@ -115,7 +115,7 @@
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">20K</span>
                                                         </span>
                                                         <span class="alt-font fw-600 fs-17 text-dark-gray">Apartment</span>
-                                                    </a>
+                                                    </a>Login
                                                 </div>
                                                 <div class="col md-mb-30px">
                                                     <a href="{% url 'sell-properties' %}" class="opacity-10 text-center justify-content-center flex-column d-flex">
@@ -157,47 +157,9 @@
                                         </div> 
                                     </div>
                                 </li>
-                                <li class="nav-item dropdown dropdown-with-icon">
-                                    <a href="{% url 'agents' %}" class="nav-link">Agents</a>
-                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-                                        <li>
-                                            <a href="{% url 'agent-details' %}"><img src="{% static 'images/avtar-24.jpg' %}" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Evan thomson</span>
-                                                    <p>I'm Evan, Expert in sales executive.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'agent-details' %}"><img src="{% static 'images/avtar-25.jpg' %}" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Bryan jonhson</span>
-                                                    <p>I'm Bryan, Expert in property broker.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'agent-details' %}"><img src="{% static 'images/avtar-26.jpg' %}" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Jemmy watson</span>
-                                                    <p>I'm Jemmy, Expert in property lawyer.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'agent-details' %}"><img src="{% static 'images/avtar-27.jpg' %}" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Jeremy dupont</span>
-                                                    <p>I'm Jeremy, Expert in property broker.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url 'agent-details' %}" class="btn btn-dark-gray btn-round-edge align-self-center text-center text-white">All view agents</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                                <li class="nav-item"><a href="{% url 'agents' %}" class="nav-link">Agents</a></li>
+
                                 <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
                                 <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
                             </ul>
@@ -209,13 +171,24 @@
                         </div>
                         <div class="header-icon">
                             <div class="header-button">
-                                <a href="{% url 'sell-properties' %}" class="btn btn-base-color btn-small btn-round-edge btn-hover-animation-switch">
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'user_logout' %}" class="btn btn-base-color btn-small btn-round-edge btn-hover-animation-switch">
                                     <span> 
-                                        <span class="btn-text">Buy property</span> 
+                                        <span class="btn-text">{{ user.username }}, Logout</span> 
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
                                     </span>
                                 </a>
+                                
+                                {% else %}
+                                <a href="{% url 'login' %}" class="btn btn-base-color btn-small btn-round-edge btn-hover-animation-switch">
+                                    <span> 
+                                        <span class="btn-text">Login</span> 
+                                        <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
+                                        <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
+                                    </span>
+                                </a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -330,34 +303,7 @@
 
         </footer>
         <!-- end footer -->
-        <!-- start subscription popup -->
-        <div id="subscribe-popup" class="mfp-hide subscribe-popup">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-md-10 bg-white">
-                        <div class="row position-relative box-shadow-quadruple-large">
-                            <div class="col-lg-6 cover-background md-h-400px xs-h-300px" style="background-image:url('{% static 'images/demo-real-estate-popup.jpg' %}');"></div>
-                            <div class="col-lg-6 newsletter-popup p-8 lg-p-5 md-p-6 xs-p-8 position-relative">
-                                <span class="text-base-color mb-10px d-block" style="">We offer a wide range of options</span>
-                                <h4 class="d-inline-block alt-font text-dark-gray mb-20px">1M+ property ready to <span class="fw-700 d-inline-flex text-highlight">buying & selling.<span class="bg-base-color h-10px bottom-8px opacity-3"></span></span></span></h4>
-                                <p>Subscribe to our newsletters and get the property for sell and rent updates.</p>
-                                <div class="d-inline-block w-100 newsletter-style-05 position-relative mb-20px">
-                                    <form action="email-templates/subscribe-newsletter.php" method="post">
-                                        <input class="input-medium w-100 border-radius-4px form-control required mb-15px" type="email" name="email" placeholder="Enter your email address" />
-                                        <input type="hidden" name="redirect" value="">
-                                        <button type="submit" aria-label="submit" class="btn btn-medium btn-round-edge btn-dark-gray btn-box-shadow w-100 submit">Subscribe now!</button>
-                                        <div class="form-results border-radius-4px mt-10px lh-normal pt-10px pb-10px ps-15px pe-15px fs-16 w-100 text-center position-absolute z-index-1 d-none"></div>
-                                    </form>
-                                </div>
-                                <label for="newsletter-off" class="fs-15"><input class="w-auto me-10px position-relative top-1px p-0" type="checkbox" id="newsletter-off" name="newsletter-off">Don't show this popup again</label>
-                            </div>
-                            <button title="Close (Esc)" type="button" class="mfp-close text-dark-gray"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end subscription popup -->
+        
         <!-- start scroll progress -->
         <div class="scroll-progress d-none d-xxl-block">
             <a href="#" class="scroll-top" aria-label="scroll">

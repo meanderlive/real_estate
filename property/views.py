@@ -1,9 +1,17 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Blog, BlogSingleCreative, Property, Contact, Subscriber, Agents, ContactAgents
 from django.http import HttpResponse
-from .forms import ContactAgentForm
+from .forms import ContactAgentForm, CustomUserCreationForm
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
+
+@login_required
 def home(request):
     properties = Property.objects.all()
     context = {
@@ -119,3 +127,37 @@ def contactdetails(request, agent_id):
         'agent': agent,
     }
     return render(request, "agent-details.html", context)
+
+def login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        email = request.POST.get('username')
+        print('form',email)
+        if form.is_valid():
+            user = form.get_user()
+            print('user',user)
+            auth_login(request, user)
+            return redirect('home')  # Adjust this as needed
+        else:
+            # Pass the form with errors back to the template
+            return render(request, 'login.html', {'form': form})
+    else:
+        form = AuthenticationForm()
+
+    return render(request, 'login.html', {'form': form})
+
+def signup(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            # login(request, user)
+            return redirect('login')
+    else:
+        form = CustomUserCreationForm()  # Initialize the form for GET requests
+    
+    return render(request, 'signup.html', {'form': form})
+
+def user_logout(request):
+    logout(request)  # This logs out the user
+    return redirect('login')  #

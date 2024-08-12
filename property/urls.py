@@ -14,6 +14,9 @@ from .views import (
     rent_properties,
     subscriber,
     contactdetails,
+    login,
+    signup,
+    user_logout,
 )
 
 urlpatterns = [
@@ -36,6 +39,10 @@ urlpatterns = [
     
     path('rent-properties-detail/<int:property_id>/', rent_properties_detail, name='rent-properties-detail'),
     path('sell-properties-details/<int:property_id>/', sell_properties_detail, name='sell-properties-details'),
+
+    path('login/', login, name="login"),
+    path('signup/', signup, name='signup'),
+    path('logout/', user_logout, name='user_logout'),
 ]
 
 
